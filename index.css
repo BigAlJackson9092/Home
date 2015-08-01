@@ -141,18 +141,5 @@ a:visited {
     text-decoration: none;
 }
 hr{border: 0;
-box-shadow:0 0 8px 1px white;
-}
-textarea{
-	color:inherit;
-	background-color: rgba(0, 0, 0, .25);
-	font-weight: 400;
-	font-size: 17px;
-	resize: none;
-	border: none;
-	
-}
-textarea:hover{
-	box-shadow: 0px 0px 10px 2px red;
-	
+box-shadow:0 0 8px 1px red;
 }
