@@ -5,14 +5,14 @@ var urlPattern = new RegExp("^(https?://)?[^ ]+[.][^ ]+([.][^ ]+)*(/[^ ]+)?$");
 function chgR(){
 	var searchdiv =document.getElementsByClassName("searchdiv")[0];
 	searchdiv.style["boxShadow"] = ("0px 0px 10px 2px red");
-	document.getElementById('hr1') .style["boxShadow"] = ("0px 0px 8px 0.75px red");
-	document.getElementById('hr2') .style["boxShadow"] = ("0px 0px 8px 0.75px red");
+	document.getElementById('hr1') .style["boxShadow"] = ("0px 0px 6px 0.75px red");
+	document.getElementById('hr2') .style["boxShadow"] = ("0px 0px 6px 0.75px red");
 }
 function chgW(){
 	var searchdiv =document.getElementsByClassName("searchdiv")[0];
 	searchdiv.style["boxShadow"] = ("0px 0px 10px 2px white");
-	document.getElementById('hr1') .style["boxShadow"] = ("0px 0px 8px 0.75px white");
-	document.getElementById('hr2') .style["boxShadow"] = ("0px 0px 8px 0.75px white");
+	document.getElementById('hr1') .style["boxShadow"] = ("0px 0px 6px 0.75px white");
+	document.getElementById('hr2') .style["boxShadow"] = ("0px 0px 6px 0.75px white");
 }
 function search() {
 	console.log("Googling \"" + box.value + "\"");
