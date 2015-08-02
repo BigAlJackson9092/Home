@@ -18,7 +18,7 @@ function chgW(){
 function search() {
 	console.log("Googling \"" + box.value + "\"");
 	console.log("Encoded query: \n" + encodeURIComponent(box.value));
-	document.location.href = "https://www.bing.com/search?q=" + encodeURIComponent(box.value);
+	document.location.href = "https://www.google.com/search?q=" + encodeURIComponent(box.value);
 }
 
 // if not search, nav to somewhere
@@ -57,6 +57,9 @@ function parseCom(com) {
 	else if (new RegExp("^ps$").test(com)) {
 		nav("http://tollandschool.powerschool.com/public");
 	}
+	else if(new RegExp("bing").test(com)) {
+		var communist = com.split("bing ");
+		document.location.href = "https://www.bing.com/search?q=" + encodeURIComponent(communist[1]);
 	// ... but is a valid URL
 	else if (urlPattern.test(com)) {
 		nav(com);
