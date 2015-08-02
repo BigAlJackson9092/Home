@@ -11,9 +11,9 @@ function chgR(){
 }
 function chgW(){
 	var searchdiv =document.getElementsByClassName("searchdiv")[0];
-	searchdiv.style["boxShadow"] = ("0px 0px 10px 2px white");
-	document.getElementById('hr1') .style["boxShadow"] = ("0px 0px 4px 0.5px white");
-	document.getElementById('hr2') .style["boxShadow"] = ("0px 0px 4px 0.5px white");
+	searchdiv.style["boxShadow"] = ("0px 0px 10px 2px #700000");
+	document.getElementById('hr1') .style["boxShadow"] = ("0px 0px 4px 0.5px #700000");
+	document.getElementById('hr2') .style["boxShadow"] = ("0px 0px 4px 0.5px #700000");
 }
 function search() {
 	console.log("Googling \"" + box.value + "\"");
