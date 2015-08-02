@@ -33,7 +33,7 @@ html, body {
 	padding-right:20;
     border-radius: 3px;
 	font-family: "Source Code Pro", monospace;
-    color: #00FF00;
+    color: red;
     font-weight: 400;
     font-size: 100%;
     min-width: 750%;
@@ -54,7 +54,7 @@ box-shadow: 0px 0px 10px 2px red;
     padding: 20px;
     border-radius: 3px;
 	font-family: "Source Code Pro", monospace;
-    color: red;
+    color: #00FF00;
     font-weight: 400;
     font-size: 100%;
     min-width: 75%;
