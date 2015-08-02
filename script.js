@@ -5,13 +5,13 @@ var isfocused = false;
 // search for text in text box
 function chgR(){
 	var searchdiv = document.getElementsByClassName("searchdiv")[0];
-	searchdiv.style["boxShadow"] = ("0px 0px 18px #700000, 0px 0px 10px 2px red;");
+	searchdiv.style["boxShadow"] = ("0px 0px 12px 2px red;");
 	document.getElementById('hr1') .style["boxShadow"] = ("0px 0px 4px 0.5px red");
 	document.getElementById('hr2') .style["boxShadow"] = ("0px 0px 4px 0.5px red");
 }
 function chgW(){
 	var searchdiv =document.getElementsByClassName("searchdiv")[0];
-	searchdiv.style["boxShadow"] = ("0px 0px 10px 2px #700000");
+	searchdiv.style["boxShadow"] = ("0px 0px 12px 2px #700000");
 	document.getElementById('hr1') .style["boxShadow"] = ("0px 0px 4px 0.5px #700000");
 	document.getElementById('hr2') .style["boxShadow"] = ("0px 0px 4px 0.5px #700000");
 }
