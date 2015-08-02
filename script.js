@@ -60,9 +60,9 @@ function parseCom(com) {
 	else if(new RegExp("^bing .+$").test(com)) {
 	  	var communist = com.replace(new RegExp("^bing +"), "");
   		document.location.href = "https://www.bing.com/search?q=" + encodeURIComponent(communist);
-    	}else if (new RegExp("(ddg)").test(com)){
-        	var communist = com.replace(new RegExp("^ddg +"), "");
-  		document.location.href = "https://www.duckduckgo.com/?q=" + encodeURIComponent(communist);
+    	}else if (new RegExp(("^ddg .+$")).test(com)){
+        	var communism = com.replace(new RegExp("^ddg +"), "");
+  		document.location.href = "https://www.duckduckgo.com/?q=" + encodeURIComponent(communism);
 	}else if (urlPattern.test(com)) {
 		nav(com);
 	}
