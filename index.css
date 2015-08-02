@@ -108,7 +108,7 @@ table {
     padding-left: 20px;
     padding-right: 20px;
     font-family: "Source Code Pro", monospace;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 th, td {
