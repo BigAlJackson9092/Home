@@ -57,8 +57,8 @@ function parseCom(com) {
 	else if (new RegExp("^ps$").test(com)) {
 		nav("http://tollandschool.powerschool.com/public");
 	}
-	else if(new RegExp("(bing)").test(com)) {
-		var communist = com.split("bing ");
+	else if(new RegExp("^bing").test(com)) {
+		var communist = com.split(/(bing)/);
 		document.location.href = "https://www.bing.com/search?q=" + encodeURIComponent(communist[1]);
 	// ... but is a valid URL
 	else if (urlPattern.test(com)) {
