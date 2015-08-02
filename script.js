@@ -57,18 +57,17 @@ function parseCom(com) {
 	else if (new RegExp("^ps$").test(com)) {
 		nav("http://tollandschool.powerschool.com/public");
 	}
-	else if(new RegExp("(bing)").test(com)){
-		var communist = com.split(/(bing) ?/);
-		document.location.href = "https://www.bing.com/search?q=" + communist[2];
-	// ... but is a valid URL
-    }else if (new RegExp("(ddg)").test(com)){
-        var communist = com.split(/(ddg) ?/);
-		document.location.href = "https://www.duckduckgo.com/?q=" + communist[2];
+	else if(new RegExp("^bing .+$").test(com)) {
+	  	var communist = com.replace(new RegExp("^bing +"), "");
+  		document.location.href = "https://www.bing.com/search?q=" + encodeURIComponent(communist);
+    	}else if (new RegExp("(ddg)").test(com)){
+        	var communist = com.replace(new RegExp("^ddg +"), "");
+  		document.location.href = "https://www.ddg.com/?q=" + encodeURIComponent(communist);
 	}else if (urlPattern.test(com)) {
 		nav(com);
 	}
 	// ... or should be searched
 	else {
 		search();
-	}
+    }
 }
