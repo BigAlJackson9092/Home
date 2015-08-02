@@ -50,7 +50,7 @@ box-shadow: 0px 0px 10px 2px red;
     min-width: 80%;
     width: 825px;
     box-shadow: 0px 0px 10px 2px red;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, .5);
     padding: 20px;
     border-radius: 3px;
 	font-family: "Source Code Pro", monospace;
@@ -108,7 +108,7 @@ table {
     padding-left: 20px;
     padding-right: 20px;
     font-family: "Source Code Pro", monospace;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, 0);
 }
 
 th, td {
