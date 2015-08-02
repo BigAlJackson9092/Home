@@ -57,13 +57,13 @@ function parseCom(com) {
 	else if (new RegExp("^ps$").test(com)) {
 		nav("http://tollandschool.powerschool.com/public");
 	}
-	else if(new RegExp("^bing .+$").test(com) || new RegExp(("^b .+$")).test(com)) {
+	else if(new RegExp("^bing .+$").test(com) || new RegExp(("(b) (.+)$")).test(com)) {
 	  	var communist = com.replace(new RegExp("^bing +"), "");
-	  	communist = com.replace(new RegExp("^b +"), "");
+	  	communist = com.replace(new RegExp("(b) +"), "");
   		document.location.href = "https://www.bing.com/search?q=" + encodeURIComponent(communist);
-    	}else if (new RegExp(("^ddg .+$")).test(com) || new RegExp(("^d .+$")).test(com)){
+    	}else if (new RegExp(("^ddg .+$")).test(com) || new RegExp(("(d) (.+)$")).test(com)){
         	var communism = com.replace(new RegExp("^ddg +"), "");
-        	communism = com.replace(new RegExp("^d +"), "");
+        	communism = com.replace(new RegExp("(d) +"), "");
   		document.location.href = "https://www.duckduckgo.com/?q=" + encodeURIComponent(communism);
 	}else if (urlPattern.test(com)) {
 		nav(com);
