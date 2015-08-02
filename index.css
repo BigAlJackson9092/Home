@@ -62,7 +62,7 @@ box-shadow: 0px 0px 10px 2px red;
 }
 
 #search-container::before {
-    content: "internet:~$";
+    content: "~$";
 }
 
 .searchbox {
