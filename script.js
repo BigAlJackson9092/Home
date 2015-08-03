@@ -54,7 +54,7 @@ function parseCom(com) {
 	else if (new RegExp("^sp$").test(com) || new RegExp("^spd$").test(com)) {
 		nav("http://www.speedtest.net");
 	}
-	else if (new RegExp("^git$").test(com)) {
+	else if (new RegExp("^gh$").test(com)) {
 		nav("https://github.com");
 	}
 	else if (new RegExp("^roll$").test(com)){
