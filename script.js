@@ -54,8 +54,12 @@ function parseCom(com) {
 	else if (new RegExp("^sp$").test(com) || new RegExp("^spd$").test(com)) {
 		nav("http://www.speedtest.net");
 	}
-	else if (new RegExp("^ps$").test(com)) {
-		nav("http://tollandschool.powerschool.com/public");
+	else if (new RegExp("^git$").test(com)) {
+		nav("https://github.com");
+	}
+	else if (new RegExp("^roll$").test(com)){
+		nav("http://roll20.net")	
+	}
 	}
 	else if(new RegExp("^bing .+$").test(com) || new RegExp(("(b) (.+)$")).test(com)) {
 	  	var communist = com.replace(new RegExp("^bing +"), "");
