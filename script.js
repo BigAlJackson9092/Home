@@ -61,7 +61,7 @@ function parseCom(com) {
 		nav("http://roll20.net")	
 	}
 	else if (new RegExp("^ai$").test(com)){
-	nav("http://ai2.appinventor.mit.edu")	
+		nav("http://ai2.appinventor.mit.edu")	
 	}
 	else if(new RegExp("^bing .+$").test(com) || new RegExp(("(b) (.+)$")).test(com)) {
 	  	var communist = com.replace(new RegExp("^bing +"), "");
