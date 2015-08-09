@@ -63,6 +63,9 @@ function parseCom(com) {
 	else if (new RegExp("^ai$").test(com)){
 		nav("http://ai2.appinventor.mit.edu")	
 	}
+	else if(new RegExp("^mw$").test(com)){
+		nav("http://www.myth-weavers.com")
+	}
 	else if(new RegExp("^bing .+$").test(com) || new RegExp(("(b) (.+)$")).test(com)) {
 	  	var communist = com.replace(new RegExp("^bing +"), "");
 	  	communist = com.replace(new RegExp("(b) +"), "");
