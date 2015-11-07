@@ -45,7 +45,12 @@ function searchKeyPress(e) {
 // parse the user's command
 function parseCom(com) {
 	// misc commands
-	if (new RegExp("^in$").test(com)) {
+	if (new RegExp("^(-g)\ .+$").test(com)) //-g will search using google no matter what is in the string, 
+						//so you can search for bing on google or 
+		var soviet= com.replace(new RegExp("^-g\ "), "") //gets rid of the '-g' in the string.
+		document.location.href = "https://www.google.com/search?q=" + encodeURIComponent(soviet);
+	}
+	else if (new RegExp("^-in$").test(com)) {
 		nav("http://inbox.google.com");
 	}
 	else if (new RegExp("^dr$").test(com)) {
@@ -66,12 +71,46 @@ function parseCom(com) {
 	else if(new RegExp("^mw$").test(com)){
 		nav("http://www.myth-weavers.com")
 	}
-	else if(new RegExp("^pf$").test(com)){
+	else if(new RegExp("^pf.*$").test(com)){
+
+		if(new RegExp("(^((pf)\ (-a|-m|-e|-sp|-sk|-b|-r|-c)\ .+)$)|(^(pf\ .+)$)").test(com)){
+			var communism = com.replace(new RegExp("^(pf)\ "),""); //gets rid of the "pf" from the string
+			communism = communism.replace(new RegExp("(-a|-m|-e|-sp|-sk|-b|-r|-c)\ "), "");
+				//gets rid of the options fromn the string, so it knows what you are searching for
+		
+			if(new RegExp("-a").test(com)){ //all
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism) + "&gsc.sort=&gsc.page=1";
+			
+			}else if(new RegExp("-m").test(com)){ //magic items
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Amagic_items";
+		
+			}else if(new RegExp("-e").test(com)){ //equipment
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Aequipment";	
+		
+			}else if(new RegExp("-sp").test(com)){ //spells
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Aspells";
+			
+			}else if(new RegExp("-sk").test(com)){ //skills
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Askills";
+			
+			}else if(new RegExp("-b").test(com)){ //bestiary
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Abestiary";
+			
+			}else if(new RegExp("-r").test(com)){ //races
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Araces";
+		
+			}else if(new RegExp("-c").test(com)){ //classes
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Aclasses";
+			
+			}else{
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism) + "&gsc.sort=&gsc.page=1";
+			}	
+		}else if(new RegExp("^pf$").test(com)){
 		nav("http://www.d20pfsrd.com")
-	}
-	else if(new RegExp("^bing .+$").test(com) || new RegExp(("(b) (.+)$")).test(com)) {
-	  	var communist = com.replace(new RegExp("^bing +"), "");
-	  	communist = com.replace(new RegExp("(b) +"), "");
+		}
+	}else if(new RegExp("^bing\ .+$").test(com) || new RegExp(("^-b\ .+$")).test(com)) {
+	  	var communist = com.replace(new RegExp("^bing\ +"), "");
+	  	communist = com.replace(new RegExp("^-b\ *"), "");
   		document.location.href = "https://www.bing.com/search?q=" + encodeURIComponent(communist);
 /*    	}else if (new RegExp(("^ddg .+$")).test(com) || new RegExp(("(d) (.+)$")).test(com)){
         	var communism = com.replace(new RegExp("^ddg +"), "");
