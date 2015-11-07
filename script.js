@@ -45,7 +45,7 @@ function searchKeyPress(e) {
 // parse the user's command
 function parseCom(com) {
 	// misc commands
-	if (new RegExp("^(-g)\ .+$").test(com)) //-g will search using google no matter what is in the string, 
+	if (new RegExp("^(-g) .+$").test(com)) //-g will search using google no matter what is in the string, 
 						//so you can search for bing on google or 
 		var soviet= com.replace(new RegExp("^-g\ "), "") //gets rid of the '-g' in the string.
 		document.location.href = "https://www.google.com/search?q=" + encodeURIComponent(soviet);
@@ -73,7 +73,7 @@ function parseCom(com) {
 	}
 	else if(new RegExp("^pf.*$").test(com)){
 
-		if(new RegExp("(^((pf)\ (-a|-m|-e|-sp|-sk|-b|-r|-c)\ .+)$)|(^(pf\ .+)$)").test(com)){
+		if(new RegExp("(^((pf) (-a|-m|-e|-sp|-sk|-b|-r|-c) .+)$)|(^(pf .+)$)").test(com)){
 			var communism = com.replace(new RegExp("^(pf)\ "),""); //gets rid of the "pf" from the string
 			communism = communism.replace(new RegExp("(-a|-m|-e|-sp|-sk|-b|-r|-c)\ "), "");
 				//gets rid of the options fromn the string, so it knows what you are searching for
@@ -108,9 +108,9 @@ function parseCom(com) {
 		}else if(new RegExp("^pf$").test(com)){
 		nav("http://www.d20pfsrd.com")
 		}
-	}else if(new RegExp("^bing\ .+$").test(com) || new RegExp(("^-b\ .+$")).test(com)) {
-	  	var communist = com.replace(new RegExp("^bing\ +"), "");
-	  	communist = com.replace(new RegExp("^-b\ *"), "");
+	}else if(new RegExp("^bing .+$").test(com) || new RegExp(("^-b .+$")).test(com)) {
+	  	var communist = com.replace(new RegExp("^bing +"), "");
+	  	communist = com.replace(new RegExp("^-b *"), "");
   		document.location.href = "https://www.bing.com/search?q=" + encodeURIComponent(communist);
 /*    	}else if (new RegExp(("^ddg .+$")).test(com) || new RegExp(("(d) (.+)$")).test(com)){
         	var communism = com.replace(new RegExp("^ddg +"), "");
