@@ -45,12 +45,12 @@ function searchKeyPress(e) {
 // parse the user's command
 function parseCom(com) {
 	// misc commands
-	if (new RegExp("^(-g) .+$").test(com)) //-g will search using google no matter what is in the string, 
+	if (new RegExp("^(-g) .+$").test(com)){ //-g will search using google no matter what is in the string, 
 						//so you can search for bing on google or 
 		var soviet= com.replace(new RegExp("^-g\ "), "") //gets rid of the '-g' in the string.
 		document.location.href = "https://www.google.com/search?q=" + encodeURIComponent(soviet);
 	}
-	else if (new RegExp("^-in$").test(com)) {
+	else if (new RegExp("^-in$").test(com)){
 		nav("http://inbox.google.com");
 	}
 	else if (new RegExp("^dr$").test(com)) {
