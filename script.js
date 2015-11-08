@@ -118,7 +118,7 @@ function parseCom(com) {
     	}else if (new RegExp(("^ddg .+$")).test(com) || new RegExp(("^-d .+$")).test(com)){
         	var stalin = com.replace(new RegExp("^ddg +"), "");
         	stalin = com.replace(new RegExp("-d +"), "");
-  		document.location.href = "https://www.duckduckgo.com/?q=" + encodeURIComponent(stalin); */
+  		document.location.href = "https://www.duckduckgo.com/?q=" + encodeURIComponent(stalin);
 	}else if (urlPattern.test(com)) {
 		nav(com);
 	}
