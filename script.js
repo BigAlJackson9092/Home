@@ -71,40 +71,43 @@ function parseCom(com) {
 	else if(new RegExp("^mw$").test(com)){
 		nav("http://www.myth-weavers.com")
 	}
-	else if(new RegExp("^pf.*$").test(com)){
+	else if(com.startsWith("pf")==true){
 
 		if(new RegExp("(^((pf) (-a|-m|-e|-sp|-sk|-b|-r|-c) .+)$)|(^(pf .+)$)").test(com)){
-			var communism = com.replace(new RegExp("^(pf)\ "),""); //gets rid of the "pf" from the string
-			communism = communism.replace(new RegExp("(-a|-m|-e|-sp|-sk|-b|-r|-c)\ "), "");
+			var communism = com.split(" "); //gets rid of the "pf" from the string
+			// communism = communism.replace(new RegExp("(-a|-m|-e|-sp|-sk|-b|-r|-c)\ "), "");
 				//gets rid of the options fromn the string, so it knows what you are searching for
+			communism.shift();
+			switch(communism[1]){
+			case "-a": //all
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[2]) + "&gsc.sort=&gsc.page=1";
+			break;
+			case "-m": //magic items
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[2]) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Amagic_items";
+			break;
+			case "-e": //equipment
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[2]) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Aequipment";	
+			break;
+			case "-sp": //spells
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[2]) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Aspells";
+			break;
+			case "-sk"://skills
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[2]) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Askills";
+			break;
+			case "-b": //bestiary
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[2]) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Abestiary";
+			break;
+			case "-r": //races
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[2]) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Araces";
+			break;
+			case "-c": //classes
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[2]) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Aclasses";
+			break
+			default:
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[2]) + "&gsc.sort=&gsc.page=1";
+			break;
 		
-			if(new RegExp("-a").test(com)){ //all
-				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism) + "&gsc.sort=&gsc.page=1";
-			
-			}else if(new RegExp("-m").test(com)){ //magic items
-				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Amagic_items";
-		
-			}else if(new RegExp("-e").test(com)){ //equipment
-				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Aequipment";	
-		
-			}else if(new RegExp("-sp").test(com)){ //spells
-				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Aspells";
-			
-			}else if(new RegExp("-sk").test(com)){ //skills
-				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Askills";
-			
-			}else if(new RegExp("-b").test(com)){ //bestiary
-				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Abestiary";
-			
-			}else if(new RegExp("-r").test(com)){ //races
-				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Araces";
-		
-			}else if(new RegExp("-c").test(com)){ //classes
-				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Aclasses";
-			
-			}else{
-				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism) + "&gsc.sort=&gsc.page=1";
-			}	
+		}	
 		}else if(new RegExp("^pf$").test(com)){
 		nav("http://www.d20pfsrd.com")
 		}
