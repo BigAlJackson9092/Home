@@ -102,7 +102,7 @@ function parseCom(com) {
 			break;
 			case "-c": //classes
 				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[2]) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Aclasses";
-			break
+			break;
 			default:
 				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[2]) + "&gsc.sort=&gsc.page=1";
 			break;
