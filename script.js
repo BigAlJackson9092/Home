@@ -77,7 +77,7 @@ function parseCom(com) {
 			var communism = com.split(" "); //gets rid of the "pf" from the string
 			// communism = communism.replace(new RegExp("(-a|-m|-e|-sp|-sk|-b|-r|-c)\ "), "");
 				//gets rid of the options fromn the string, so it knows what you are searching for
-			communism.shift();
+			console.log( communism.shift() );
 			switch(communism[1]){
 			case "-a": //all
 				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[2]) + "&gsc.sort=&gsc.page=1";
