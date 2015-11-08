@@ -78,33 +78,33 @@ function parseCom(com) {
 			// communism = communism.replace(new RegExp("(-a|-m|-e|-sp|-sk|-b|-r|-c)\ "), "");
 				//gets rid of the options fromn the string, so it knows what you are searching for
 			console.log( communism.shift() );
-			switch(communism[1]){
+			switch(communism[0]){
 			case "-a": //all
-				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[2]) + "&gsc.sort=&gsc.page=1";
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[1]) + "&gsc.sort=&gsc.page=1";
 			break;
 			case "-m": //magic items
-				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[2]) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Amagic_items";
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[1]) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Amagic_items";
 			break;
 			case "-e": //equipment
-				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[2]) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Aequipment";	
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[1]) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Aequipment";	
 			break;
 			case "-sp": //spells
-				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[2]) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Aspells";
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[1]) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Aspells";
 			break;
 			case "-sk"://skills
-				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[2]) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Askills";
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[1]) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Askills";
 			break;
 			case "-b": //bestiary
-				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[2]) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Abestiary";
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[1]) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Abestiary";
 			break;
 			case "-r": //races
-				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[2]) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Araces";
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[1]) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Araces";
 			break;
 			case "-c": //classes
-				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[2]) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Aclasses";
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[1]) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Aclasses";
 			break;
 			default:
-				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[2]) + "&gsc.sort=&gsc.page=1";
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[1]) + "&gsc.sort=&gsc.page=1";
 			break;
 		
 		}	
