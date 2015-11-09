@@ -104,7 +104,7 @@ function parseCom(com) {
 				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[1]) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Aclasses";
 			break;
 			default:
-				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[1]) + "&gsc.sort=&gsc.page=1";
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[0]) + "&gsc.sort=&gsc.page=1";
 			break;
 		
 		}	
@@ -113,11 +113,11 @@ function parseCom(com) {
 		}
 	}else if(new RegExp("^bing .+$").test(com) || new RegExp(("^-b .+$")).test(com)) {
 	  	var communist = com.replace(new RegExp("^bing +"), "");
-	  	communist = com.replace(new RegExp("^-b *"), "");
+	  	communist = communist.replace(new RegExp("^-b *"), "");
   		document.location.href = "https://www.bing.com/search?q=" + encodeURIComponent(communist);
     	}else if (new RegExp(("^ddg .+$")).test(com) || new RegExp(("^-d .+$")).test(com)){
         	var stalin = com.replace(new RegExp("^ddg +"), "");
-        	stalin = com.replace(new RegExp("-d +"), "");
+        	stalin = stalin.replace(new RegExp("^-d +"), "");
   		document.location.href = "https://www.duckduckgo.com/?q=" + encodeURIComponent(stalin);
 	}else if (urlPattern.test(com)) {
 		nav(com);
