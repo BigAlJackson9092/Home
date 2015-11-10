@@ -139,9 +139,8 @@ function parseCom(com) {
 		
 
 */
-	if(new RegExp("(^((pf)\ (-a|-m|-e|-sp|-sk|-b|-r|-c)\ .+)$)|(^(pf\ .+)$)").test(com)){
-+			var communism = com.replace(new RegExp("^(pf)\ "),""); //gets rid of the "pf" from the string
-+			communism = communism.replace(new RegExp("(-a|-m|-e|-sp|-sk|-b|-r|-c)\ "), "");
+	if(new RegExp("(^((pf) (-a|-m|-e|-sp|-sk|-b|-r|-c) .+)$)|(^(pf .+)$)").test(com)){ //gets rid of the "pf" from the string
++			communism = communism.replace(new RegExp("(-a|-m|-e|-sp|-sk|-b|-r|-c) *"), "");
 +				//gets rid of the options fromn the string, so it knows what you are searching for
 +		
 +			if(new RegExp("-a").test(com)){ //all
