@@ -74,34 +74,58 @@ function parseCom(com) {
 	else if(com.startsWith("pf")==true){
 
 		if(new RegExp("(^((pf) (-a|-m|-e|-sp|-sk|-b|-r|-c) .+)$)|(^(pf .+)$)").test(com)){
-			var communism = com.split(" "); //gets rid of the "pf" from the string
+			var communism = com.split("-"); //gets rid of the "pf" from the string
 			// communism = communism.replace(new RegExp("(-a|-m|-e|-sp|-sk|-b|-r|-c)\ "), "");
 				//gets rid of the options fromn the string, so it knows what you are searching for
-			console.log( communism.shift() );
+			communism.shift();
 			switch(communism[0]){
-			case "-a": //all
-				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[1]) + "&gsc.sort=&gsc.page=1";
+			case "a": //all
+				communism = communism.split(" ");
+				communism.shift();
+				communism.join(" ");
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism) + "&gsc.sort=&gsc.page=1";
 			break;
-			case "-m": //magic items
-				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[1]) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Amagic_items";
+			case "m": //magic items
+				communism = communism.split(" ");
+				communism.shift();
+				communism.join(" ");
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Amagic_items";
 			break;
-			case "-e": //equipment
-				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[1]) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Aequipment";	
+			case "e": //equipment
+				communism = communism.split(" ");
+				communism.shift();
+				communism.join(" ");
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Aequipment";	
 			break;
-			case "-sp": //spells
-				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[1]) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Aspells";
+			case "sp": //spells
+				communism = communism.split(" ");
+				communism.shift();
+				communism.join(" ");
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Aspells";
 			break;
-			case "-sk"://skills
-				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[1]) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Askills";
+			case "sk"://skills
+				communism = communism.split(" ");
+				communism.shift();
+				communism.join(" ");
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Askills";
 			break;
-			case "-b": //bestiary
-				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[1]) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Abestiary";
+			case "b": //bestiary
+				communism = communism.split(" ");
+				communism.shift();
+				communism.join(" ");
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Abestiary";
 			break;
-			case "-r": //races
-				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[1]) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Araces";
+			case "r": //races
+				communism = communism.split(" ");
+				communism.shift();
+				communism.join(" ");
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Araces";
 			break;
-			case "-c": //classes
-				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[1]) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Aclasses";
+			case "c": //classes
+				communism = communism.split(" ");
+				communism.shift();
+				communism.join(" ");
+				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism) + "&gsc.sort=&gsc.page=1&gsc.ref=more%3Aclasses";
 			break;
 			default:
 				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism[0]) + "&gsc.sort=&gsc.page=1";
