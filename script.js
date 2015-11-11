@@ -173,7 +173,6 @@ function parseCom(com) {
 		}
 		else if(new RegExp("^pf$").test(com)){
  			nav("http://www.d20pfsrd.com")}
-	}
 	}else if(new RegExp("^bing .+$").test(com) || new RegExp(("^-b .+$")).test(com)){
 	  	var communist = com.replace(new RegExp("^bing +"), "");
 	  	communist = communist.replace(new RegExp("^-b *"), "");
