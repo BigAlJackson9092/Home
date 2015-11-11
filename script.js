@@ -139,7 +139,7 @@ function parseCom(com) {
 		
 
 */
-	if(new RegExp("(^((pf) (-a|-m|-e|-sp|-sk|-b|-r|-c) .+)$)|(^(pf .+)$)").test(com)){ //gets rid of the "pf" from the string
+		if(new RegExp("(^((pf) (-a|-m|-e|-sp|-sk|-b|-r|-c) .+)$)|(^(pf .+)$)").test(com)){ //gets rid of the "pf" from the string
 			communism = communism.replace(new RegExp("(-a|-m|-e|-sp|-sk|-b|-r|-c) *"), "");
 				//gets rid of the options fromn the string, so it knows what you are searching for
 		
@@ -169,12 +169,11 @@ function parseCom(com) {
 			
 			}else{
 				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism) + "&gsc.sort=&gsc.page=1";
-			}	
-			else if(new RegExp("^pf$").test(com)){
+			}
+		}
+		else if(new RegExp("^pf$").test(com)){
  			nav("http://www.d20pfsrd.com")}
 	}
-		
-		
 	}else if(new RegExp("^bing .+$").test(com) || new RegExp(("^-b .+$")).test(com)){
 	  	var communist = com.replace(new RegExp("^bing +"), "");
 	  	communist = communist.replace(new RegExp("^-b *"), "");
