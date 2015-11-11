@@ -170,12 +170,12 @@ function parseCom(com) {
 			}else{
 				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism) + "&gsc.sort=&gsc.page=1";
 			}	
-		}else if(new RegExp("^pf$").test(com)){
- 		nav("http://www.d20pfsrd.com")
+			else if(new RegExp("^pf$").test(com)){
+ 			nav("http://www.d20pfsrd.com")}
+	}
 		
 		
-		
-	}else if(new RegExp("^bing .+$").test(com) || new RegExp(("^-b .+$")).test(com)) {
+	}else if(new RegExp("^bing .+$").test(com) || new RegExp(("^-b .+$")).test(com)){
 	  	var communist = com.replace(new RegExp("^bing +"), "");
 	  	communist = communist.replace(new RegExp("^-b *"), "");
   		document.location.href = "https://www.bing.com/search?q=" + encodeURIComponent(communist);
@@ -183,11 +183,11 @@ function parseCom(com) {
         	var stalin = com.replace(new RegExp("^ddg +"), "");
         	stalin = stalin.replace(new RegExp("^-d +"), "");
   		document.location.href = "https://www.duckduckgo.com/?q=" + encodeURIComponent(stalin);
-	}else if (urlPattern.test(com)) {
+	}else if (urlPattern.test(com)){
 		nav(com);
 	}
 	// ... or should be searched
 	else {
 		search();
-    }
+    	}
 }
