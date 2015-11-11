@@ -50,7 +50,7 @@ function parseCom(com) {
 		var soviet= com.replace(new RegExp("^-g\ "), "") //gets rid of the '-g' in the string.
 		document.location.href = "https://www.google.com/search?q=" + encodeURIComponent(soviet);
 	}
-	else if (new RegExp("^-in$").test(com)){
+	else if (new RegExp("^in$").test(com)){
 		nav("http://inbox.google.com");
 	}
 	else if (new RegExp("^dr$").test(com)) {
@@ -140,6 +140,7 @@ function parseCom(com) {
 
 */
 		if(new RegExp("(^((pf) (-a|-m|-e|-sp|-sk|-b|-r|-c) .+)$)|(^(pf .+)$)").test(com)){ //gets rid of the "pf" from the string
+			var communism = com.replace(new RegExp("^pf"),"");
 			communism = communism.replace(new RegExp("(-a|-m|-e|-sp|-sk|-b|-r|-c) *"), "");
 				//gets rid of the options fromn the string, so it knows what you are searching for
 		
