@@ -44,7 +44,7 @@ box-shadow: 0px 0px 10px 2px red;
 }
 #search-container {
      display: block;
-    margin-top: 15%;
+    margin-top: 10px;
     margin-left: 5%;
     margin-right: 5%;
     min-width: 80%;
