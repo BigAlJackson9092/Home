@@ -22,7 +22,7 @@ html, body {
 .searchdiv {
     /* center */
     display: block;
-    margin-top: 15%;
+    margin-top: 10px;
     margin-left: 5%;
     margin-right: 5%;
     min-width: 80%;
