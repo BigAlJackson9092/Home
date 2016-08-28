@@ -74,6 +74,9 @@ function parseCom(com) {
 	else if(new RegExp("^er$").test(com)){
 		nav("https://ernie.erau.edu");
 	}
+	else if(new RegExp("^can$").test(com)){
+		nav("https://erau.instructure.com/");
+	}
 	else if(com.startsWith("pf")==true){
 
 		if(new RegExp("(^((pf) (-a|-m|-e|-sp|-sk|-b|-r|-c) .+)$)|(^(pf .+)$)").test(com)){ //gets rid of the "pf" from the string
