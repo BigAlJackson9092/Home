@@ -66,10 +66,13 @@ function parseCom(com) {
 		nav("http://roll20.net")	
 	}
 	else if (new RegExp("^ai$").test(com)){
-		nav("http://ai2.appinventor.mit.edu")	
+		nav("http://ai2.appinventor.mit.edu");
 	}
 	else if(new RegExp("^mw$").test(com)){
-		nav("http://www.myth-weavers.com")
+		nav("http://www.myth-weavers.com");
+	}
+	else if(new RegExp("^er$").test(com)){
+		nav("https://ernie.erau.edu");
 	}
 	else if(com.startsWith("pf")==true){
 
