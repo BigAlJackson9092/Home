@@ -89,7 +89,7 @@ function parseCom(com) {
 	else if (new RegExp("^point$|^ptbuy$|^pointbuy$|^pbc$|^pbcalc$").test(com)){
 		nav("http://www.jody-white.com/pathfinder-ability-score-calculator.php");
 	}
-	else if ( (com.startsWith("pfwiki")==true)||(com.startsWith("pfw")==true)||(new RegExp("(.*\ *-pfwiki\ *$)|(.*\ *-pfw\ *$)").test(com)){
+	else if ( (com.startsWith("pfwiki")==true)||(com.startsWith("pfw")==true)||(new RegExp("(.*\ *-pfwiki\ *$)|(.*\ *-pfw\ *$)").test(com))){
 		if (new RegExp("(^pfwiki$)|(^pfw$)").text(com)){
 			nav("http://pathfinderwiki.com/wiki/");
 		}else{
