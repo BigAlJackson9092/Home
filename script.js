@@ -86,6 +86,18 @@ function parseCom(com) {
 	else if (new RegExp("^hunt$").test(com)){
 		nav("http://huntlibrary.erau.edu/");
 	}
+	else if (new RegExp("^point$|^ptbuy$|^pointbuy$|^pbc$|^pbcalc$").test(com)){
+		nav("http://www.jody-white.com/pathfinder-ability-score-calculator.php");
+	}
+	else if ( (com.startsWith("pfwiki")==true)||(com.startsWith("pfw")==true)||(new RegExp("(.*\ *-pfwiki\ *$)|(.*\ *-pfw\ *$)").test(com)){
+		if (new RegExp("(^pfwiki$)|(^pfw$)").text(com)){
+			nav("http://pathfinderwiki.com/wiki/");
+		}else{
+		var putinPasta= com.replace(new RegExp("^(pfwiki\ *)|(\ *-pfwiki\ *)$|(\ *-pfw\ *$)"), "");
+		document.location.href = "http://pathfinderwiki.com/mediawiki/index.php?title=Special%3ASearch&go=Go&search=" 
+			+ encodeURIComponent(putinPasta);
+		}
+	}
 	else if (com.startsWith("pf")==true){
 
 		if (new RegExp("(^((pf) (-a|-m|-e|-sp|-sk|-b|-r|-c|-f) .+)$)|(^(pf .+)$)").test(com)){ //gets rid of the "pf" from the string
@@ -123,6 +135,7 @@ function parseCom(com) {
 			}else{
 				document.location.href = "http://cse.google.com/cse?cx=006680642033474972217:6zo0hx_wle8&q=test#gsc.tab=0&gsc.q=" + encodeURIComponent(communism) + "&gsc.sort=&gsc.page=1";
 			}
+			
 		}
 		else if (new RegExp("^pf$").test(com)){
  			nav("http://www.d20pfsrd.com")}
